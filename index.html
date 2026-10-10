@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今晚放映｜免费最全电影网 · 免费片单一应俱全的公路夜场</title>
+<meta name="keywords" content="免费最全电影网, 免费电影片单, 高清电影夜场, 在线观影公路站, 免费片单全收录, mianfeizuiquandianyingwang-top.github.io, 正版影视资源, 观影出口编号, 每日新片上映">
+<meta name="description" content="免费最全电影网就像一间永不散场的露天汽车影院：免费片单一应俱全，电影、剧集与动漫按出口编号分区，支持在线检票入场、极速放映。下一个出口编号是 https://mianfeizuiquandianyingwang-top.github.io，请驶入夜场，今晚放映一部好片。">
+<meta name="author" content="免费最全电影网">
+<meta name="robots" content="index, follow, archive">
+<link rel="canonical" href="https://mianfeizuiquandianyingwang-top.github.io">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "免费最全电影网",
+  "url": "https://mianfeizuiquandianyingwang-top.github.io",
+  "description": "永不散场的露天汽车影院，免费片单一应俱全，按出口编号分区，支持在线检票入场与极速放映",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://mianfeizuiquandianyingwang-top.github.io/#放映={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<style>
+:root{
+  --asphalt:#101A2E;
+  --asphalt-l:#1B2A45;
+  --asphalt-d:#0A1220;
+  --neon:#FF3B5C;
+  --neon2:#FFC53D;
+  --neon3:#3DE0C4;
+  --mist:#E8EEF5;
+  --mist-d:#A8B6CC;
+  --paper:#F2EEDF;
+  --ticket:#C9A24B;
+  --serif:'Georgia','Times New Roman','Songti SC','PingFang SC',serif;
+  --sans:'Arial','PingFang SC','Microsoft YaHei',sans-serif;
+  --mono:'Courier New',Courier,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  background:var(--asphalt);
+  background-image:
+    radial-gradient(ellipse at 50% 0%,var(--asphalt-l),var(--asphalt) 45%,var(--asphalt-d) 100%);
+  color:var(--mist);
+  line-height:1.75;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+/* 车尾灯拖影 */
+#taillights{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+.taillight{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--neon);box-shadow:0 0 12px var(--neon),0 0 24px rgba(255,59,92,.4);animation:drive linear infinite;}
+@keyframes drive{from{transform:translate(0,0);opacity:0;}10%{opacity:1;}to{transform:translate(60vw,-100vh);opacity:0;}}
+
+a{text-decoration:none;color:var(--mist);transition:.15s;}
+ul{list-style:none;}
+.container{max-width:1120px;margin:0 auto;padding:0 5%;position:relative;z-index:1;}
+
+/* 票根 */
+.ticket{background:var(--asphalt-l);border:2px dashed var(--ticket);box-shadow:0 8px 28px rgba(0,0,0,.4);position:relative;}
+.ticket::before{content:"";position:absolute;left:0;right:0;top:44px;height:1px;background:repeating-linear-gradient(90deg,var(--ticket) 0,var(--ticket) 8px,transparent 8px,transparent 14px);opacity:.5;}
+.ticket::after{content:"";position:absolute;left:0;right:0;bottom:28px;height:1px;background:repeating-linear-gradient(90deg,var(--ticket) 0,var(--ticket) 8px,transparent 8px,transparent 14px);opacity:.5;}
+
+header{background:rgba(10,18,32,.93);border-bottom:2px solid var(--neon);position:sticky;top:0;z-index:1000;backdrop-filter:blur(6px);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;}
+.logo{font-family:var(--serif);font-size:1.5rem;color:var(--mist);display:flex;align-items:center;gap:.7rem;letter-spacing:1px;}
+.logo .arrow{width:0;height:0;border-left:14px solid var(--neon);border-top:8px solid transparent;border-bottom:8px solid transparent;filter:drop-shadow(0 0 6px var(--neon));}
+.logo span{color:var(--neon2);}
+.logo small{font-family:var(--mono);font-size:.6rem;color:var(--mist-d);letter-spacing:2px;}
+.nav-menu{display:flex;gap:1.5rem;}
+.nav-menu a{font-family:var(--mono);font-size:.8rem;color:var(--mist-d);padding:.3rem 0;border-bottom:2px solid transparent;}
+.nav-menu a:hover{color:var(--neon2);border-bottom-color:var(--neon2);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:26px;height:2px;background:var(--neon2);}
+
+main{padding:2.5rem 0 4rem;}
+
+/* HERO */
+.hero{padding:3.2rem 3rem;margin-bottom:3.5rem;display:grid;grid-template-columns:1.5fr 1fr;gap:3rem;align-items:center;overflow:hidden;}
+.hero::before{content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(255,59,92,.16),transparent 70%);}
+.hero-cap{font-family:var(--mono);font-size:.72rem;color:var(--neon2);letter-spacing:3px;margin-bottom:1rem;}
+.hero h1{font-family:var(--serif);font-size:2.9rem;line-height:1.25;color:var(--mist);margin-bottom:1rem;}
+.hero h1 em{font-style:normal;color:var(--neon2);}
+.hero h1 .screen{display:block;font-size:.95rem;color:var(--mist-d);font-style:italic;margin-top:.6rem;letter-spacing:1px;}
+.hero-url{font-family:var(--mono);font-size:.85rem;color:var(--mist);background:rgba(255,59,92,.1);border-left:4px solid var(--neon);padding:.5rem .9rem;display:inline-block;margin-bottom:1.2rem;word-break:break-all;}
+.hero-desc{font-size:.94rem;color:var(--mist-d);max-width:520px;margin-bottom:1.5rem;}
+.hero-btn{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--serif);font-size:.95rem;color:var(--asphalt);background:var(--neon2);padding:.9rem 2.2rem;border:2px solid var(--neon2);letter-spacing:1px;}
+.hero-btn:hover{background:var(--asphalt);color:var(--neon2);}
+.hero-btn::after{content:"▶";font-size:.8rem;}
+
+/* 放映机光束 */
+.projector{text-align:center;}
+.screen{width:210px;height:130px;margin:0 auto;border:4px solid var(--mist);border-radius:6px;position:relative;background:linear-gradient(135deg,rgba(61,224,196,.15),rgba(255,59,92,.15));
+  box-shadow:0 0 30px rgba(232,238,245,.15),inset 0 0 30px rgba(0,0,0,.4);transform:perspective(400px) rotateX(6deg);}
+.screen::before{content:"DRIVE-IN";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:.85rem;color:var(--neon2);letter-spacing:4px;}
+.beam{position:absolute;top:0;left:50%;transform:translateX(-50%);width:120px;height:90px;background:linear-gradient(180deg,rgba(255,197,61,.3),transparent);clip-path:polygon(40% 0,60% 0,100% 100%,0 100%);}
+
+/* 栏目标题 */
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;padding-bottom:.6rem;border-bottom:2px solid var(--neon);position:relative;}
+.sec-head::after{content:"";position:absolute;left:0;bottom:-5px;width:60px;height:2px;background:var(--neon2);box-shadow:0 0 8px var(--neon2);}
+.sec-title{font-family:var(--serif);font-size:1.6rem;color:var(--mist);}
+.sec-title .exit{color:var(--neon2);margin-right:.6rem;}
+.sec-tag{font-family:var(--mono);font-size:.7rem;color:var(--asphalt);background:var(--neon2);padding:.25rem .75rem;}
+
+/* 分类 */
+.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;margin-bottom:3.5rem;}
+.cat-item{background:var(--asphalt-l);border:1px solid var(--neon);padding:1.5rem 1rem;text-align:center;cursor:pointer;transition:.18s;position:relative;}
+.cat-item::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:repeating-linear-gradient(90deg,var(--neon) 0,var(--neon) 10px,transparent 10px,transparent 16px);}
+.cat-item:hover{background:var(--neon);box-shadow:0 0 22px rgba(255,59,92,.4);}
+.cat-item:hover .cat-name{color:var(--asphalt);}
+.cat-item:hover .cat-exit{color:var(--asphalt-d);}
+.cat-exit{font-family:var(--mono);font-size:.66rem;color:var(--neon2);display:block;margin-bottom:.6rem;}
+.cat-icon{font-size:1.9rem;display:block;margin-bottom:.5rem;filter:drop-shadow(0 0 6px rgba(255,197,61,.4));}
+.cat-name{font-family:var(--serif);font-size:1rem;color:var(--mist);}
+
+/* 排行榜 */
+.ranking{margin-bottom:3.5rem;}
+.rank-list{background:var(--asphalt-l);border:1px solid var(--neon);padding:1rem 1.5rem;}
+.rank-row{display:grid;grid-template-columns:60px 1fr 120px 90px;gap:1rem;align-items:center;padding:1rem 1.2rem;margin-bottom:.7rem;background:var(--asphalt);border-left:4px solid var(--neon2);transition:.15s;}
+.rank-row:last-child{margin-bottom:0;}
+.rank-row:hover{background:rgba(255,59,92,.12);border-left-color:var(--neon);}
+.rank-no{font-family:var(--mono);font-size:1.5rem;color:var(--neon2);text-align:center;line-height:1;}
+.rank-row:nth-child(1) .rank-no{color:var(--neon);}
+.rank-row:nth-child(2) .rank-no{color:var(--neon3);}
+.rank-info h3{font-family:var(--sans);font-size:1.05rem;color:var(--mist);margin-bottom:.1rem;}
+.rank-info p{font-family:var(--mono);font-size:.72rem;color:var(--mist-d);}
+.rank-cars{font-family:var(--mono);font-size:.7rem;color:var(--mist-d);text-align:center;}
+.rank-score{font-family:var(--serif);font-size:1.35rem;color:var(--neon2);text-align:center;}
+
+/* 新片 */
+.latest{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-bottom:3.5rem;}
+.vhs{background:var(--asphalt-l);border:1px solid var(--neon);overflow:hidden;transition:.18s;box-shadow:0 6px 18px rgba(0,0,0,.35);}
+.vhs:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(255,59,92,.28);}
+.vhs-cover{height:165px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;border-bottom:1px solid rgba(255,59,92,.4);}
+.vhs:nth-child(1) .vhs-cover{background:linear-gradient(135deg,var(--neon),var(--asphalt-d));}
+.vhs:nth-child(2) .vhs-cover{background:linear-gradient(135deg,var(--neon3),var(--asphalt-d));}
+.vhs:nth-child(3) .vhs-cover{background:linear-gradient(135deg,var(--neon2),var(--asphalt-d));}
+.vhs-cover .stub{position:absolute;top:10px;right:10px;font-family:var(--mono);font-size:.64rem;color:var(--asphalt);background:var(--neon2);padding:.15rem .5rem;}
+.vhs-body{padding:1.3rem;}
+.vhs-body h3{font-family:var(--serif);font-size:1.1rem;color:var(--mist);margin-bottom:.5rem;}
+.vhs-body p{font-size:.82rem;color:var(--mist-d);margin-bottom:.8rem;line-height:1.6;}
+.vhs-tags{display:flex;gap:.4rem;flex-wrap:wrap;}
+.vhs-tag{font-family:var(--mono);font-size:.68rem;color:var(--neon2);border:1px solid var(--neon2);padding:.15rem .55rem;}
+
+/* 关于 */
+.about{padding:3rem;margin-bottom:3.5rem;background:var(--asphalt-l);border:2px dashed var(--ticket);}
+.about h2{font-family:var(--serif);font-size:1.6rem;color:var(--neon2);margin-bottom:1.2rem;padding-bottom:.6rem;border-bottom:1px solid rgba(201,162,75,.4);}
+.about p{font-size:.92rem;color:var(--mist-d);margin-bottom:.8rem;line-height:1.85;}
+.about strong{color:var(--neon2);}
+.signs{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem;}
+.signs div{background:var(--asphalt);border:1px solid var(--neon);padding:1rem;text-align:center;}
+.signs .v{font-family:var(--serif);font-size:1.5rem;color:var(--neon2);}
+.signs .l{font-family:var(--mono);font-size:.7rem;color:var(--mist-d);margin-top:.3rem;}
+
+footer{border-top:2px solid var(--neon);background:var(--asphalt-d);padding:2.5rem 5%;text-align:center;}
+.footer-inner{max-width:1120px;margin:0 auto;}
+.footer-logo{font-family:var(--serif);font-size:1.5rem;color:var(--mist);margin-bottom:1rem;}
+.footer-logo span{color:var(--neon2);}
+footer p{font-family:var(--mono);font-size:.78rem;color:var(--mist-d);margin-bottom:.5rem;}
+footer a{color:var(--neon2);text-decoration:underline;}
+
+.back-top{position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;background:var(--neon);color:var(--mist);display:flex;align-items:center;justify-content:center;font-size:1.1rem;cursor:pointer;opacity:0;transition:.3s;z-index:999;box-shadow:0 0 16px rgba(255,59,92,.4);}
+.back-top.show{opacity:1;}
+.back-top:hover{background:var(--neon2);}
+
+@media(max-width:1024px){
+  .hero{grid-template-columns:1fr;}
+  .hero h1{font-size:2.4rem;}
+  .categories{grid-template-columns:repeat(3,1fr);}
+  .latest{grid-template-columns:1fr;}
+}
+@media(max-width:900px){
+  .nav-menu{position:fixed;top:70px;left:-100%;flex-direction:column;width:100%;background:var(--asphalt-d);padding:1.5rem 0;border-bottom:2px solid var(--neon);transition:.3s;}
+  .nav-menu.active{left:0;}
+  .nav-menu li{margin:.8rem 0;text-align:center;}
+  .hamburger{display:flex;}
+  .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+  .hamburger.active span:nth-child(2){opacity:0;}
+  .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px);}
+  .rank-row{grid-template-columns:52px 1fr;row-gap:.6rem;}
+  .rank-cars,.rank-score{grid-column:2;}
+  .signs{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:600px){
+  .hero{padding:2.5rem 1.3rem;}
+  .hero h1{font-size:1.9rem;}
+  .hero-url{font-size:.8rem;}
+  .categories{grid-template-columns:repeat(2,1fr);}
+  .about{padding:2rem 1.3rem;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<div id="taillights"></div>
+<header>
+  <div class="container nav-inner">
+    <div class="logo"><span class="arrow"></span>免费最全<span>电影网</span><small>DRIVE-IN CINEMA</small></div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home">入场口</a></li>
+      <li><a href="#categories">出口牌</a></li>
+      <li><a href="#ranking">放映榜</a></li>
+      <li><a href="#latest">新片场</a></li>
+      <li><a href="#about">场记本</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<main class="container">
+  <!-- HERO -->
+  <section class="ticket hero" id="home">
+    <div>
+      <div class="hero-cap">◉ 银幕已亮 · 今晚放映</div>
+      <h1>免费最全<em>电影网</em><span class="screen">— 免费片单一应俱全，永不散场的公路夜场</span></h1>
+      <div class="hero-url">https://mianfeizuiquandianyingwang-top.github.io</div>
+      <p class="hero-desc">这里是一间永不散场的露天汽车影院：免费片单一应俱全，电影、剧集与动漫按出口编号分区，支持在线检票入场、极速放映。下一个出口编号是 <strong>https://mianfeizuiquandianyingwang-top.github.io</strong>，请驶入夜场。</p>
+      <a href="#" class="hero-btn">检票入场</a>
+    </div>
+    <div class="projector"><div class="screen"><div class="beam"></div></div></div>
+  </section>
+
+  <!-- 分类 -->
+  <section id="categories">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="exit">▸</span>出口牌 · 分区索引</h2>
+      <span class="sec-tag">6 EXITS</span>
+    </div>
+    <div class="categories">
+      <div class="cat-item"><span class="cat-exit">EXIT 01</span><span class="cat-icon">🎬</span><span class="cat-name">动作</span></div>
+      <div class="cat-item"><span class="cat-exit">EXIT 02</span><span class="cat-icon">🔮</span><span class="cat-name">科幻</span></div>
+      <div class="cat-item"><span class="cat-exit">EXIT 03</span><span class="cat-icon">😂</span><span class="cat-name">喜剧</span></div>
+      <div class="cat-item"><span class="cat-exit">EXIT 04</span><span class="cat-icon">💕</span><span class="cat-name">爱情</span></div>
+      <div class="cat-item"><span class="cat-exit">EXIT 05</span><span class="cat-icon">🎨</span><span class="cat-name">动漫</span></div>
+      <div class="cat-item"><span class="cat-exit">EXIT 06</span><span class="cat-icon">📜</span><span class="cat-name">纪录</span></div>
+    </div>
+  </section>
+
+  <!-- 排行榜 -->
+  <section id="ranking" class="ranking">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="exit">▸</span>放映榜 · 满场最多</h2>
+      <span class="sec-tag">TOP 05</span>
+    </div>
+    <div class="rank-list">
+      <div class="rank-row">
+        <div class="rank-no">A-01</div>
+        <div class="rank-info"><h3>沙丘 2 (2024)</h3><p>科幻 / 冒险 / 史诗巨制</p></div>
+        <div class="rank-cars">1280万 辆车入场</div>
+        <div class="rank-score">9.8</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">A-02</div>
+        <div class="rank-info"><h3>奥本海默 (2023)</h3><p>传记 / 历史 / 诺兰导演</p></div>
+        <div class="rank-cars">1102万 辆车入场</div>
+        <div class="rank-score">9.6</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">A-03</div>
+        <div class="rank-info"><h3>坠落的审判 (2023)</h3><p>悬疑 / 犯罪 / 金棕榈奖</p></div>
+        <div class="rank-cars">964万 辆车入场</div>
+        <div class="rank-score">9.1</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">B-01</div>
+        <div class="rank-info"><h3>美国小说 (2023)</h3><p>喜剧 / 剧情 / 奥斯卡改编剧本</p></div>
+        <div class="rank-cars">821万 辆车入场</div>
+        <div class="rank-score">8.8</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">B-02</div>
+        <div class="rank-info"><h3>利益区域 (2023)</h3><p>剧情 / 历史 / 奥斯卡国际片</p></div>
+        <div class="rank-cars">706万 辆车入场</div>
+        <div class="rank-score">8.5</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 新片 -->
+  <section id="latest">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="exit">▸</span>新片场 · 今晚加映</h2>
+      <span class="sec-tag">NEW 03</span>
+    </div>
+    <div class="latest">
+      <div class="vhs">
+        <div class="vhs-cover">🦖<span class="stub">NEW</span></div>
+        <div class="vhs-body">
+          <h3>哥斯拉大战金刚 2</h3>
+          <p>两大怪兽王者联手对抗地心远古威胁，特效密集、节奏爽快，周末必看。</p>
+          <div class="vhs-tags"><span class="vhs-tag">动作</span><span class="vhs-tag">2024</span></div>
+        </div>
+      </div>
+      <div class="vhs">
+        <div class="vhs-cover">🐼<span class="stub">HOT</span></div>
+        <div class="vhs-body">
+          <h3>功夫熊猫 4</h3>
+          <p>阿宝新修行面对魅影妖后，笑点充足、画风讨喜，亲子共看无压力。</p>
+          <div class="vhs-tags"><span class="vhs-tag">动画</span><span class="vhs-tag">2024</span></div>
+        </div>
+      </div>
+      <div class="vhs">
+        <div class="vhs-cover">🧠<span class="stub">★</span></div>
+        <div class="vhs-body">
+          <h3>头脑特工队 2</h3>
+          <p>青春期情绪总部加入新成员，心理隐喻更成熟，老粉丝新观众都能入戏。</p>
+          <div class="vhs-tags"><span class="vhs-tag">动画</span><span class="vhs-tag">2024</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section id="about" class="ticket about">
+    <h2>场记本 · 关于免费最全电影网</h2>
+    <p>欢迎来到 <strong>免费最全电影网</strong>，一间永不散场的露天汽车影院。出口编号：<strong>https://mianfeizuiquandianyingwang-top.github.io</strong>，免费片单一应俱全。</p>
+    <p>我们把选片当作排片：每一部影片都有所属出口牌、片单编号与满场记录，让查找像看路牌一样清楚。新片每日加映，经典长期在映，按下播放即等于检票入场。</p>
+    <div class="signs">
+      <div><div class="v">12,800+</div><div class="l">在映片源</div></div>
+      <div><div class="v">6</div><div class="l">出口牌</div></div>
+      <div><div class="v">每日</div><div class="l">新片加映</div></div>
+      <div><div class="v">24h</div><div class="l">永不散场</div></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">免费最全<span>电影网</span></div>
+    <p>© 2024 免费最全电影网 · 露天汽车影院</p>
+    <p>出口编号：<a href="https://mianfeizuiquandianyingwang-top.github.io">https://mianfeizuiquandianyingwang-top.github.io</a></p>
+    <p style="margin-top:.5rem;font-size:.72rem;">— 银幕常亮 · 好片永续 —</p>
+  </div>
+</footer>
+
+<div class="back-top" id="backTop">↑</div>
+
+<script>
+var hamburger=document.getElementById('hamburger');
+var navMenu=document.getElementById('navMenu');
+hamburger.addEventListener('click',function(){hamburger.classList.toggle('active');navMenu.classList.toggle('active');});
+navMenu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){hamburger.classList.remove('active');navMenu.classList.remove('active');});});
+var backTop=document.getElementById('backTop');
+window.addEventListener('scroll',function(){backTop.classList.toggle('show',window.scrollY>400);});
+backTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+// 车尾灯
+var tl=document.getElementById('taillights');
+for(var i=0;i<10;i++){(function(){var t=document.createElement('div');t.className='taillight';t.style.left=(Math.random()*80)+'%';t.style.bottom=(Math.random()*40-20)+'px';t.style.animationDuration=(4+Math.random()*5)+'s';t.style.animationDelay=(Math.random()*8)+'s';
+var s=6+Math.random()*8;t.style.width=s+'px';t.style.height=s+'px';tl.appendChild(t);})();}
+// 光束扫射
+var beam=document.querySelector('.beam');var a=-12,d=1;
+setInterval(function(){a+=d*.8;if(a>12||a<-12)d*=-1;beam.style.transform='translateX(-50%) rotate('+a+'deg)';},110);
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.1});
+document.querySelectorAll('.cat-item,.rank-row,.vhs,.about').forEach(function(el){el.style.opacity='0';el.style.transform='translateY(18px)';el.style.transition='opacity .5s ease,transform .5s ease';io.observe(el);});
+</script>
+</body>
+</html>
